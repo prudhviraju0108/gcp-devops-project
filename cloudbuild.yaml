@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/finance-422500/wb-fin-repo/python-flask-app:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/finance-422500/wb-fin-repo/python-flask-app:latest']
+images:
+- 'us-central1-docker.pkg.dev/finance-422500/wb-fin-repo/python-flask-app:latest'
